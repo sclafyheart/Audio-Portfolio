@@ -142,6 +142,6 @@ The model struggled most with Kazakh morphology, proper nouns, institutional nam
 
 * `kazakh-raw.wav`
 * `kazakh-processed.wav`
-* `kazakh-reference-transcript.txt`
+* `kazakh-sample-metadata.md`
 * `kazakh-whisper-output.json`
 * `kazakh-transcript-comparison.md`

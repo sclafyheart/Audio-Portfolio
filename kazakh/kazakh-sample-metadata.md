@@ -2,7 +2,7 @@
 
 - Language: Kazakh
 - Regional background: Western Kazakhstan
-- Speech type: Prepared (Poem) / Spontaneous
+- Speech type: Spontaneous
 - Microphone: Shure SM58
 - Audio interface: Focusrite Scarlett 2i2
 - DAW: FL Studio

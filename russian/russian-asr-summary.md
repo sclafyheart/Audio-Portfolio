@@ -25,5 +25,6 @@ The untrimmed recording caused Whisper to generate nonexistent subtitle-credit t
 
 - `russian-raw.wav`
 - `russian-processed.wav`
-- `russian-reference-transcript.txt`
+- `russian-reference-transcript.md`
 - `russian-whisper-output.json`
+- `russian-sample-metadata.md`

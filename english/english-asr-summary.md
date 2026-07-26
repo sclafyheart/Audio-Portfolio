@@ -20,30 +20,6 @@ The transcription was generally usable with light human review.
 
 ## Error Patterns
 
-### Phrase Insertion
-
-Whisper inserted the phrase:
-
-```text
-as well as
-```
-
-into the first paragraph.
-
-Reference:
-
-```text
-audio effects, mixing, reproduction, and reinforcement of sound
-```
-
-Whisper:
-
-```text
-audio effects, as well as mixing, reproduction and reinforcement of sound
-```
-
-The added phrase does not significantly change the meaning, but it is not present in the source transcript.
-
 ### Sentence-Boundary Error
 
 Whisper failed to separate two sentences in the first paragraph.

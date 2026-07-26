@@ -208,7 +208,6 @@ multilingual-audio-ai-portfolio/
 ├── kazakh/
 │   ├── kazakh-raw.wav
 │   ├── kazakh-processed.wav
-│   ├── kazakh-reference-transcript.txt
 │   ├── kazakh-whisper-output.json
 │   ├── kazakh-transcript-comparison.md
 │   └── kazakh-asr-summary.md
@@ -216,7 +215,6 @@ multilingual-audio-ai-portfolio/
 ├── russian/
 │   ├── russian-raw.wav
 │   ├── russian-processed.wav
-│   ├── russian-reference-transcript.txt
 │   ├── russian-whisper-output.json
 │   ├── russian-transcript-comparison.md
 │   └── russian-asr-summary.md
@@ -224,7 +222,6 @@ multilingual-audio-ai-portfolio/
 ├── english/
 │   ├── english-raw.wav
 │   ├── english-processed.wav
-│   ├── english-reference-transcript.txt
 │   ├── english-whisper-output.json
 │   ├── english-transcript-comparison.md
 │   └── english-asr-summary.md
@@ -248,9 +245,6 @@ The `images/` folder is optional and should contain only screenshots that clearl
 * FL Studio
 * Shure SM58 microphone
 * Focusrite Scarlett 2i2 audio interface
-* NVIDIA RTX 4070 laptop GPU
-
-Only tools and equipment actually used in the project are listed.
 
 ## Human Review
 
@@ -283,15 +277,12 @@ Audio-editing examples should contain only:
 
 ## Disclosure
 
-AI-assisted tools may have been used for transcription, organization, formatting, and first-pass analysis.
+AI-assisted tools may have been used for organization, formatting, and first-pass analysis.
 
 All final linguistic judgments, reference transcripts, error classifications, and conclusions were manually reviewed.
 
 ## Contact
 
-Add your professional contact information here:
-
-* Name:
-* Email:
-* LinkedIn:
-* Portfolio:
+* Name: Azat Kossanov
+* Email: kossanov.azat@gmail.com
+* LinkedIn: linkedin.com/in/azat-kossanov

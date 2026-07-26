@@ -193,50 +193,6 @@ Error severity is classified as:
 * Major
 * Hallucination
 
-## Repository Structure
-
-```text
-multilingual-audio-ai-portfolio/
-├── README.md
-├── LICENSE
-│
-├── docs/
-│   ├── ANNOTATION_GUIDELINES.md
-│   ├── PORTFOLIO_OVERVIEW.md
-│   └── DECISION_LOG.md
-│
-├── kazakh/
-│   ├── kazakh-raw.wav
-│   ├── kazakh-processed.wav
-│   ├── kazakh-whisper-output.json
-│   ├── kazakh-transcript-comparison.md
-│   └── kazakh-asr-summary.md
-│
-├── russian/
-│   ├── russian-raw.wav
-│   ├── russian-processed.wav
-│   ├── russian-whisper-output.json
-│   ├── russian-transcript-comparison.md
-│   └── russian-asr-summary.md
-│
-├── english/
-│   ├── english-raw.wav
-│   ├── english-processed.wav
-│   ├── english-whisper-output.json
-│   ├── english-transcript-comparison.md
-│   └── english-asr-summary.md
-│
-└── audio-editing/
-    ├── vocal-mix-before.wav
-    ├── vocal-mix-after.wav
-    ├── editing-case-study.md
-    └── images/
-        ├── vocal-processing-chain.png
-        └── corrective-eq.png
-```
-
-The `images/` folder is optional and should contain only screenshots that clearly support the editing case study.
-
 ## Tools and Equipment
 
 * OpenAI Whisper Small

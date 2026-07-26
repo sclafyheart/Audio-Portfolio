@@ -12,7 +12,6 @@ The transcription was generally usable with light human review.
 
 | Reference                                       | Whisper Output                                   | Error Type                                 |
 | ----------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
-| `audio effects, mixing, reproduction`           | `audio effects, as well as mixing, reproduction` | Phrase insertion                           |
 | `recording—the placing of microphones`          | `recording, the placing of microphones`          | Punctuation normalization                  |
 | `levels. The physical recording`                | `levels, the physical recording`                 | Sentence-boundary error                    |
 | `set up, sound check, and do live sound mixing` | `set up soundcheck and do live sound mixing`     | Punctuation and word-formatting difference |

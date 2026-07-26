@@ -1,33 +1,103 @@
-# Portfolio Overview
+# Multilingual Audio and ASR Portfolio
 
-## Professional Positioning
+## Overview
 
-Multilingual audio and AI-data portfolio combining:
+This portfolio demonstrates multilingual speech recording, audio processing, automatic speech recognition evaluation, transcript review, and error analysis in Kazakh, Russian, and English.
 
-- Kazakh and Russian language expertise
-- English professional proficiency
-- Music production and audio editing
-- Speech annotation
-- Audio-quality review
-- AI model evaluation
-- Technical documentation
+The project compares Whisper Small outputs against human-reviewed reference transcripts. It focuses on identifying linguistic errors, hallucinations, language-specific weaknesses, and the level of human review required before ASR output can be used reliably.
 
-## Recommended Reviewer Path
+## Languages
 
-1. Listen to the audio-editing before/after example.
-2. Review one Kazakh annotated clip.
-3. Review one Russian annotated clip.
-4. Read the audio-quality rubric and decision rationale.
-5. Review the ASR error analysis.
-6. Read the full annotation methodology only if additional detail is desired.
+* Kazakh
+* Russian
+* English
 
-## Evidence Map
+## Tools
 
-| Evidence | Kazakh Role | Russian Role | Audio Editing Role |
-|---|---:|---:|---:|
-| Kazakh speech case study | Essential | Supporting | Supporting |
-| Russian speech case study | Supporting | Essential | Supporting |
-| Audio editing case study | Supporting | Supporting | Essential |
-| Annotation guidelines | Essential | Essential | Useful |
-| Audio-quality rubric | Strong | Strong | Strong |
-| ASR evaluation | Strong | Strong | Strong |
+* OpenAI Whisper Small
+* Python
+* FFmpeg
+* FL Studio
+* Shure SM58 microphone
+* Focusrite Scarlett 2i2 audio interface
+
+## Recording Workflow
+
+Each sample was recorded in WAV format and exported in two versions:
+
+* Raw recording
+* Lightly processed recording
+
+ASR-ready copies were converted to:
+
+* Mono
+* 16 kHz sample rate
+* 16-bit PCM WAV
+
+The raw or ASR-ready recording was transcribed with Whisper Small.
+
+## Evaluation Workflow
+
+For each language:
+
+1. Record a speech sample.
+2. Create a human-reviewed reference transcript.
+3. Run the recording through Whisper Small.
+4. Compare the Whisper transcript with the reference.
+5. Identify lexical, grammatical, segmentation, spelling, and hallucination errors.
+6. Categorize the severity of the errors.
+7. Summarize the findings in a language-specific evaluation report.
+
+## Main Findings
+
+### English
+
+Whisper Small produced a highly accurate transcript. Most differences involved punctuation, article choice, regional spelling, or minor phrase formatting.
+
+### Russian
+
+Whisper Small produced a generally intelligible transcript but made errors involving compound professional terms, word order, inflection, conjunctions, and specialized audio vocabulary.
+
+The untrimmed recording also caused Whisper to hallucinate subtitle-credit text during trailing silence.
+
+### Kazakh
+
+Whisper Small preserved the broad subject of the recording but produced frequent lexical, morphological, orthographic, segmentation, and named-entity errors.
+
+The Kazakh transcript required substantially more native-speaker correction than the Russian and English transcripts.
+
+## Portfolio Structure
+
+```text
+multilingual-audio-ai-portfolio/
+├── README.md
+├── docs/
+│   ├── PORTFOLIO_OVERVIEW.md
+│   ├── ANNOTATION_GUIDELINES.md
+│   └── DECISION_LOG.md
+├── kazakh/
+├── russian/
+├── english/
+```
+
+Each language folder contains:
+
+* Raw recording
+* Processed recording
+* Human-reviewed reference transcript
+* Whisper JSON output
+* Transcript comparison
+* ASR evaluation summary
+* Recording metadata
+
+## Purpose
+
+This project demonstrates the ability to:
+
+* Evaluate multilingual speech-recognition output
+* Review transcripts for linguistic accuracy
+* Identify ASR hallucinations
+* Categorize language-specific errors
+* Work with multilingual audio data
+* Communicate technical findings clearly
+* Apply native-speaker judgment to Kazakh and Russian speech

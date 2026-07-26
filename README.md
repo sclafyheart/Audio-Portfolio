@@ -1,84 +1,197 @@
-# Multilingual Audio, Speech Annotation, and AI Evaluation Portfolio
+# Multilingual Audio and ASR Evaluation Portfolio
 
-This repository demonstrates practical skills relevant to multilingual AI audio work, including:
+This repository demonstrates practical skills in multilingual speech recording, audio processing, automatic speech recognition evaluation, transcript review, and audio editing.
 
-- Kazakh, Russian, and English voice recording
-- Verbatim and normalized transcription
-- Code-switching analysis
-- Audio editing and restoration
-- Audio-quality evaluation
-- Annotation methodology
-- Automatic speech recognition evaluation
-- Human review of AI-generated transcripts
+The portfolio includes original voice recordings and human-reviewed ASR analyses in:
+
+* Kazakh
+* Russian
+* English
+
+It also includes an audio-editing case study focused on vocal cleanup, processing, and mixing decisions.
 
 ## Portfolio Focus
 
-This portfolio is designed to show the intersection of:
+This portfolio demonstrates the intersection of:
 
 1. Multilingual linguistic judgment
 2. Audio production and critical listening
-3. Data annotation and quality assurance
-4. AI model evaluation
-5. Clear technical documentation
+3. ASR transcript evaluation
+4. Human review of AI-generated output
+5. Error classification and quality assurance
+6. Clear technical documentation
 
 ## Featured Work
 
-### 1. Audio Editing Case Study
+### 1. Kazakh ASR Evaluation
 
-Location: `audio/editing-case-study/`
+Location:
 
-Includes:
-
-- Untreated source
-- Edited result
-- Processing notes
-- Before/after comparison
-- Technical rationale and trade-offs
-
-### 2. Kazakh Speech Annotation
-
-Location: `annotations/kazakh/`
+```text
+kazakh/
+```
 
 Includes:
 
-- Raw and processed voice sample
-- Verbatim transcript
-- Normalized transcript
-- English translation
-- Code-switching and prosody notes
-- Quality and confidence assessment
+* Raw Kazakh recording
+* Lightly processed recording
+* Human-reviewed reference transcript
+* Whisper Small JSON output
+* Original-versus-Whisper transcript comparison
+* Detailed ASR evaluation summary
 
-### 3. Russian Speech Annotation
+The Kazakh analysis focuses on:
 
-Location: `annotations/russian/`
+* Lexical substitutions
+* Morphological errors
+* Orthographic errors
+* Word segmentation
+* Named-entity recognition
+* Regional pronunciation
+* Native-speaker review
 
-Uses the same annotation framework as the Kazakh case study for consistency.
+Whisper preserved the broad topic of the recording but produced frequent errors that required substantial correction.
 
-### 4. Audio-Quality Evaluation
+### 2. Russian ASR Evaluation
 
-Location: `evaluation/audio-quality/`
+Location:
 
-Includes a scoring rubric and accept/edit/reject/escalate decisions.
+```text
+russian/
+```
 
-### 5. ASR Evaluation
+Includes:
 
-Location: `evaluation/asr/`
+* Raw Russian recording
+* Lightly processed recording
+* Human-reviewed reference transcript
+* Whisper Small JSON output
+* Original-versus-Whisper transcript comparison
+* Detailed ASR evaluation summary
 
-Compares automatic transcripts against manually reviewed references and documents:
+The Russian analysis focuses on:
 
-- Substitutions
-- Deletions
-- Insertions
-- Code-switching errors
-- Proper-noun errors
-- Noise-related failures
-- Optional word error rate
+* Compound-word segmentation
+* Inflection
+* Word order
+* Conjunction substitution
+* Specialized audio terminology
+* Trailing-silence hallucination
+
+The untrimmed Russian recording caused Whisper to generate nonexistent subtitle-credit text. Trimming the trailing silence removed the hallucinated ending.
+
+### 3. English ASR Evaluation
+
+Location:
+
+```text
+english/
+```
+
+Includes:
+
+* Raw English recording
+* Lightly processed recording
+* Human-reviewed reference transcript
+* Whisper Small JSON output
+* Original-versus-Whisper transcript comparison
+* Detailed ASR evaluation summary
+
+The English transcript was highly accurate and required only minor correction involving:
+
+* Punctuation
+* Sentence boundaries
+* Article choice
+* Phrase insertion
+* Word formatting
+* British and American spelling differences
+
+### 4. Audio Editing Case Study
+
+Location:
+
+```text
+audio-editing/
+```
+
+Includes:
+
+* Before audio
+* After audio
+* Editing and mixing case study
+* Optional processing-chain screenshots
+
+The case study documents:
+
+* Initial audio-quality assessment
+* Cleanup and clip-gain decisions
+* Equalization
+* Compression
+* De-essing
+* Reverb or delay
+* Automation
+* Trade-offs between clarity, dynamics, and naturalness
+
+## Cross-Language Findings
+
+Using Whisper Small with a similar recording setup produced noticeably different results across the three languages.
+
+### English
+
+Whisper produced a highly accurate transcript with mostly minor punctuation and formatting differences.
+
+### Russian
+
+Whisper produced a generally intelligible transcript but made several important errors involving compound terms, morphology, conjunctions, and technical vocabulary.
+
+### Kazakh
+
+Whisper preserved the general topic but produced frequent lexical, morphological, orthographic, segmentation, and named-entity errors.
+
+The results demonstrate the importance of human review, especially for multilingual and lower-resource speech-recognition tasks.
 
 ## Methodology
 
-The full methodology is documented in:
+The annotation and evaluation process is documented in:
 
-`docs/ANNOTATION_GUIDELINES.md`
+```text
+docs/ANNOTATION_GUIDELINES.md
+```
+
+The general workflow was:
+
+1. Record an original voice sample.
+2. Export raw and lightly processed versions.
+3. Convert an ASR-ready copy to mono, 16 kHz, 16-bit PCM WAV.
+4. Transcribe the recording using Whisper Small.
+5. Compare the ASR result with a human-reviewed reference transcript.
+6. Identify meaningful errors.
+7. Classify errors by type and severity.
+8. Document language-specific findings.
+9. Remove unsupported hallucinated content.
+10. Treat the audio recording as the final source of truth.
+
+## Error Categories
+
+The evaluations use the following categories:
+
+* Substitution
+* Deletion
+* Insertion
+* Word-order error
+* Segmentation error
+* Morphological error
+* Named-entity error
+* Orthographic difference
+* Punctuation error
+* Hallucination
+
+Error severity is classified as:
+
+* Minor
+* Moderate
+* Major
+* Hallucination
 
 ## Repository Structure
 
@@ -86,71 +199,99 @@ The full methodology is documented in:
 multilingual-audio-ai-portfolio/
 ├── README.md
 ├── LICENSE
+│
 ├── docs/
 │   ├── ANNOTATION_GUIDELINES.md
 │   ├── PORTFOLIO_OVERVIEW.md
 │   └── DECISION_LOG.md
-├── audio/
-│   ├── voice-samples/
-│   │   ├── kazakh/
-│   │   ├── russian/
-│   │   └── english/
-│   └── editing-case-study/
-│       ├── before/
-│       ├── after/
-│       └── case-study.md
-├── annotations/
-│   ├── kazakh/
-│   │   ├── annotations.csv
-│   │   └── case-study.md
-│   └── russian/
-│       ├── annotations.csv
-│       └── case-study.md
-├── evaluation/
-│   ├── audio-quality/
-│   │   ├── rubric.csv
-│   │   └── findings.md
-│   └── asr/
-│       ├── reference-transcripts.csv
-│       ├── model-results.csv
-│       ├── error-analysis.csv
-│       └── findings.md
-├── scripts/
-│   ├── transcribe.py
-│   ├── evaluate_asr.py
-│   └── requirements.txt
-└── portfolio/
-    ├── master-portfolio.pdf
-    ├── kazakh-role-portfolio.pdf
-    ├── russian-role-portfolio.pdf
-    └── audio-editing-role-portfolio.pdf
+│
+├── kazakh/
+│   ├── kazakh-raw.wav
+│   ├── kazakh-processed.wav
+│   ├── kazakh-reference-transcript.txt
+│   ├── kazakh-whisper-output.json
+│   ├── kazakh-transcript-comparison.md
+│   └── kazakh-asr-summary.md
+│
+├── russian/
+│   ├── russian-raw.wav
+│   ├── russian-processed.wav
+│   ├── russian-reference-transcript.txt
+│   ├── russian-whisper-output.json
+│   ├── russian-transcript-comparison.md
+│   └── russian-asr-summary.md
+│
+├── english/
+│   ├── english-raw.wav
+│   ├── english-processed.wav
+│   ├── english-reference-transcript.txt
+│   ├── english-whisper-output.json
+│   ├── english-transcript-comparison.md
+│   └── english-asr-summary.md
+│
+└── audio-editing/
+    ├── vocal-mix-before.wav
+    ├── vocal-mix-after.wav
+    ├── editing-case-study.md
+    └── images/
+        ├── vocal-processing-chain.png
+        └── corrective-eq.png
 ```
 
-## Tools
+The `images/` folder is optional and should contain only screenshots that clearly support the editing case study.
 
-Add only the tools actually used. Examples:
+## Tools and Equipment
 
-- FL Studio
-- Focusrite audio interface
-- Python
-- Jupyter
-- Whisper or another multilingual ASR model
-- Audacity or another waveform editor
+* OpenAI Whisper Small
+* Python
+* FFmpeg
+* FL Studio
+* Shure SM58 microphone
+* Focusrite Scarlett 2i2 audio interface
+* NVIDIA RTX 4070 laptop GPU
+
+Only tools and equipment actually used in the project are listed.
+
+## Human Review
+
+Whisper output was treated as a first-pass transcript rather than ground truth.
+
+All final reference transcripts and conclusions were manually reviewed for:
+
+* Spoken-word accuracy
+* Grammar and morphology
+* Proper nouns
+* Technical terminology
+* Word boundaries
+* Meaning-changing substitutions
+* Unsupported hallucinations
+
+The audio recording remained the authoritative source.
 
 ## Data and Consent
 
-All audio in this repository should be:
+All speech recordings in this repository were created by the repository owner.
 
-- Recorded by the repository owner
-- Used with explicit speaker permission
-- Public-domain or properly licensed
+No private conversations or third-party copyrighted speech recordings are included.
 
-Private conversations and copyrighted audio should not be uploaded.
+Audio-editing examples should contain only:
+
+* Original recordings
+* Original music
+* Properly licensed material
+* Material used with explicit permission
 
 ## Disclosure
 
-Automatic tools may be used for first-pass transcription, segmentation, or analysis. All final reference transcripts, linguistic judgments, and portfolio conclusions should be manually reviewed.
+AI-assisted tools may have been used for transcription, organization, formatting, and first-pass analysis.
+
+All final linguistic judgments, reference transcripts, error classifications, and conclusions were manually reviewed.
 
 ## Contact
 
-Add your preferred professional contact information here.
+Add your professional contact information here:
+
+* Name:
+* Email:
+* LinkedIn:
+* Portfolio:

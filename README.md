@@ -102,7 +102,6 @@ The English transcript was highly accurate and required only minor correction in
 * Punctuation
 * Sentence boundaries
 * Article choice
-* Phrase insertion
 * Word formatting
 * British and American spelling differences
 

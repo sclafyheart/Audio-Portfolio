@@ -66,20 +66,6 @@ Whisper Small preserved the broad subject of the recording but produced frequent
 
 The Kazakh transcript required substantially more native-speaker correction than the Russian and English transcripts.
 
-## Portfolio Structure
-
-```text
-multilingual-audio-ai-portfolio/
-├── README.md
-├── docs/
-│   ├── PORTFOLIO_OVERVIEW.md
-│   ├── ANNOTATION_GUIDELINES.md
-│   └── DECISION_LOG.md
-├── kazakh/
-├── russian/
-├── english/
-```
-
 Each language folder contains:
 
 * Raw recording

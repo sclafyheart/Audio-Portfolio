@@ -127,7 +127,6 @@ The case study documents:
 * Cleanup and clip-gain decisions
 * Equalization
 * Compression
-* De-essing
 * Reverb or delay
 * Automation
 * Trade-offs between clarity, dynamics, and naturalness

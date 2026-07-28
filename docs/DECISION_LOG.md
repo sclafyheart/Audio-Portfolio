@@ -12,7 +12,7 @@ A Medium model was attempted for Kazakh but did not complete reliably, so it was
 
 **Decision:** Convert ASR input files to mono, 16 kHz, 16-bit PCM WAV.
 
-**Reason:** This format is widely compatible with speech-recognition systems and provides a consistent input format across languages.
+**Reason:** This format is widely compatible with speech-recognition systems and provides a consistent input format across different languages.
 
 ## Reference Transcripts
 

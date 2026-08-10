@@ -93,7 +93,7 @@ Includes:
 * Raw English recording
 * Lightly processed recording
 * Human-reviewed reference transcript
-* Whisper Small JSON output
+* Whisper Small output
 * Original-versus-Whisper transcript comparison
 * Detailed ASR evaluation summary
 

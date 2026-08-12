@@ -4,7 +4,7 @@
 
 Whisper Small produced a highly accurate transcription of the English speech sample. The model preserved nearly all of the original wording, sentence order, technical terminology, and meaning.
 
-Most differences were minor and involved punctuation, article choice, phrase insertion, and word formatting rather than major recognition failures. Unlike the Kazakh sample, the English output did not contain severe lexical substitutions, distorted named entities, or widespread morphological errors.
+Most differences were minor and involved punctuation, article choice, phrase insertion, and word formatting rather than major recognition failure. Unlike the Kazakh sample, the English output did not contain severe lexical substitutions, distorted named entities, or widespread morphological errors.
 
 The transcription was generally usable with light human review.
 
